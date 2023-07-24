@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.heading{
+    text-align: center;
+    margin: 60px 0px;
+    font-weight: 600;
+    color: #333333db;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#search-input{
+    max-width: 400px;
+    width: 60%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    font-size: 16px;
+}
+
+#search-button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: #138065;
+    color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+#search-button:hover{
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.9;
+}
+
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto ;
+}
+
+
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.search-result img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-result:hover img{
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-transform: capitalize;
+}
+
+#show-more-button{
+    background-color: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+    display: none;
+}
+#show-more-button:hover{
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.9;
+}
+
+@media (max-width:1250px){
+    .search-results{
+        padding: 20px;
+    }
+}
+
+@media (max-width:768px){
+    .search-result{
+        width: 45%;
+    }
+}
+@media (max-width:480px){
+    .heading{
+        margin: 20px 20px;
+        padding: 20px;
+        font-size: 25px;
+    }
+    .search-result{
+        width: 100%;
+    }
+}
