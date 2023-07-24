@@ -4,6 +4,7 @@ const formEl = document.querySelector("form");
 const inputEl = document.getElementById("search-input");
 const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-button");
+const h3 = document.querySelector("h3");
 
 let inputData = "";
 let page = 1;
@@ -45,8 +46,13 @@ async function searchImages(){
 
     page++;
 
-    if(page > 1){
+    if(inputData === ""){
+        showMore.style.display = "none";
+        h3.style.display = "block";
+    }
+    else if(page > 1){
         showMore.style.display = "block";
+        h3.style.display = "none";
     }
 }
 
